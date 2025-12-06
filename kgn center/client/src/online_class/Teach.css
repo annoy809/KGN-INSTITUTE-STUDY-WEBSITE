@@ -1,0 +1,285 @@
+/* Page Wrapper */
+.teach-page {
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+  background-color: #f9fbfd;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Reusable */
+.teach-section-title {
+  font-size: 36px;
+  text-align: center;
+  color: #023e8a;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* Hero Section */
+.teach-hero {
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  color: white;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.teach-hero-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.teach-hero-text {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.teach-cta-btn {
+  background-color: white;
+  color: #0077b6;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.teach-cta-btn:hover {
+  background-color: #caf0f8;
+}
+
+/* Why Teach Cards */
+.teach-why {
+  padding: 70px 20px;
+}
+
+.teach-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.teach-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.teach-card:hover {
+  transform: translateY(-5px);
+}
+
+.teach-card-title {
+  color: #0077b6;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.teach-card-text {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Earnings Section */
+.teach-earnings {
+  background-color: #e0f4ff;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.teach-earnings-subtext {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+.teach-earning-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.teach-earning-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 260px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.07);
+}
+
+.teach-earning-title {
+  font-size: 22px;
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.teach-earning-amount {
+  font-size: 20px;
+  font-weight: bold;
+  color: #023e8a;
+}
+
+/* Steps Section */
+.teach-steps {
+  background-color: #eaf4ff;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.teach-step-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.teach-step-card {
+  background: white;
+  width: 280px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+  text-align: center;
+}
+
+.teach-step-number {
+  background-color: #0077b6;
+  color: white;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+.teach-step-title {
+  font-size: 18px;
+  color: #023e8a;
+  margin-bottom: 10px;
+}
+
+.teach-step-text {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Testimonials */
+.teach-testimonials {
+  background-color: #ffffff;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.teach-testimonial-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.teach-testimonial-card {
+  background-color: #f0f8ff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.teach-testimonial-text {
+  font-style: italic;
+  color: #333;
+}
+
+.teach-testimonial-name {
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+/* FAQ Section */
+.teach-faq {
+  background-color: #f9f9f9;
+  padding: 70px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.teach-faq-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.teach-faq-item {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.teach-faq-question {
+  font-size: 18px;
+  color: #0353a4;
+  margin-bottom: 8px;
+}
+
+.teach-faq-answer {
+  font-size: 16px;
+  color: #333;
+}
+
+.teach-final-cta {
+  background: linear-gradient(135deg, #00b4d8, #023e8a);
+  color: white;
+  text-align: center;
+  padding: 70px 30px;
+  margin: 50px auto;
+  max-width: 1000px;
+  border-radius: 16px;
+  border: 1px solid lightgray;
+    box-shadow: 0 10px 30px lightgray;
+
+}
+
+
+.teach-final-title {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.teach-final-subtext {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .teach-hero-title {
+    font-size: 32px;
+  }
+
+  .teach-card,
+  .teach-earning-card,
+  .teach-step-card {
+    width: 90%;
+  }
+
+  .teach-card-grid,
+  .teach-step-grid,
+  .teach-earning-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

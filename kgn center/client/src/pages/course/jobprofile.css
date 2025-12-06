@@ -1,0 +1,220 @@
+/* ==================================================
+   GLOBAL RESET
+================================================== */
+
+
+/* ==================================================
+   BACKGROUND GLASS MODE
+================================================== */
+.jobprofile-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-height: 92vh !important;
+
+  /* iOS glass */
+  background: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+
+  animation: fadeIn 0.6s ease !important;
+  padding: 20px !important;
+}
+
+/* ==================================================
+   CARD — FROSTED iOS GLASS
+================================================== */
+.jobprofile-card {
+  width: 100% !important;
+  max-width: 420px !important;
+
+  background: rgba(255, 255, 255, 0.45) !important;
+  border-radius: 22px !important;
+
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+
+  padding: 30px !important;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.12) !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 25px !important;
+
+  animation: cardFloat 1.2s ease-out !important;
+}
+
+/* iOS FLOAT ANIMATION */
+@keyframes cardFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ==================================================
+   HEADER + PROFILE PIC
+================================================== */
+.jobprofile-header {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.profile-avatar {
+  width: 110px !important;
+  height: 110px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+
+  border: 2px solid rgba(255, 255, 255, 0.35) !important;
+  backdrop-filter: blur(10px) !important;
+
+  animation: fadeIn 0.8s ease !important;
+}
+
+/* ==================================================
+   TEXT ANIMATION (iOS Fade)
+================================================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.jobprofile-header h2,
+.job-title {
+  animation: fadeIn 0.7s ease !important;
+}
+
+/* ==================================================
+   INFO ITEMS
+================================================== */
+.jobprofile-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+}
+
+.info-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 12px 15px !important;
+
+  background: rgba(255, 255, 255, 0.35) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 12px !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+
+  transition: 0.25s ease !important;
+  animation: fadeIn 0.7s ease !important;
+}
+
+.info-item:hover {
+  transform: translateY(-2px) !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+}
+
+.info-item input {
+  width: 100% !important;
+  border: none !important;
+  background: transparent !important;
+  outline: none !important;
+  font-size: 15px !important;
+  color: #111 !important;
+}
+
+/* ==================================================
+   TEXTAREA & OTHER INPUTS
+================================================== */
+.jobprofile-info textarea,
+.jobprofile-info input {
+  background: rgba(255, 255, 255, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(8px) !important;
+
+  border-radius: 12px !important;
+  padding: 12px !important;
+}
+
+/* ==================================================
+   BUTTONS (GLASS + iOS RIPPLES)
+================================================== */
+.jobprofile-actions button {
+  padding: 10px 16px !important;
+  border-radius: 12px !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+
+  position: relative !important;
+  overflow: hidden !important;
+
+  transition: 0.2s ease !important;
+}
+
+/* RIPPLE EFFECT */
+.jobprofile-actions button:active::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 180% !important;
+  height: 180% !important;
+  background: rgba(255, 255, 255, 0.4) !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) scale(0) !important;
+  border-radius: 50% !important;
+
+  animation: ripple 0.4s ease-out !important;
+}
+
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(1) !important;
+    opacity: 0 !important;
+  }
+}
+
+/* BUTTON COLORS */
+.edit-btn {
+  background: #007aff !important;
+  color: white !important;
+}
+
+.save-btn {
+  background: #34c759 !important;
+  color: white !important;
+}
+
+.cancel-btn {
+  background: #ffcc00 !important;
+  color: #222 !important;
+}
+
+.logout-btn {
+  background: #ff3b30 !important;
+  color: white !important;
+}
+
+/* HOVER LIFT */
+.jobprofile-actions button:hover {
+  transform: translateY(-2px) !important;
+  filter: brightness(1.1) !important;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 460px) {
+  .jobprofile-card {
+    padding: 20px !important;
+  }
+}

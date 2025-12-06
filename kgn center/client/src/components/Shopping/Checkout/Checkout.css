@@ -1,0 +1,260 @@
+/* =========================================================
+ 🌟 Checkout Page — Premium Smooth UI (2025 Edition)
+========================================================= */
+
+.checkout-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f9fafb, #f1f5f9);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  font-family: "Inter", sans-serif;
+  color: #1e293b;
+  transition: all 0.3s ease-in-out;
+}
+
+.checkout-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 30px;
+}
+
+.checkout-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ==================== Left Section — Billing ==================== */
+.left-section {
+  flex: 1;
+  min-width: 360px;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.left-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.left-section h3 {
+  margin-bottom: 20px;
+  color: #1e293b;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.billing-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #334155;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-1px);
+}
+
+.submit-btn:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* ==================== Right Section — Summary ==================== */
+.right-section {
+  flex: 0.8;
+  min-width: 320px;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.right-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.order-summary h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.cart-img img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.cart-details h4 {
+  font-size: 1rem;
+  color: #1e293b;
+  margin: 0 0 3px 0;
+}
+
+.cart-details p {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 10px 0;
+}
+
+.pay-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pay-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  transform: translateY(-1px);
+}
+
+.pay-btn:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.refund-policy {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* ==================== Overlay for Disabled Billing ==================== */
+.billing-overlay-wrapper {
+  position: relative;
+}
+
+.billing-overlay-wrapper.disabled .billing-form {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.billing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #334155;
+  border-radius: 16px;
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 900px) {
+  .checkout-content {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .checkout-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .checkout-title {
+    font-size: 1.6rem;
+  }
+
+  .submit-btn,
+  .pay-btn {
+    font-size: 0.95rem;
+  }
+}

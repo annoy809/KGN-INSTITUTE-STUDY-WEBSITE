@@ -1,0 +1,127 @@
+/* Modal Backdrop */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Box */
+.modal-box {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.4s ease-in-out;
+  transition: all 0.3s ease;
+}
+
+.modal-box h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Inputs and Selects */
+.modal-box input,
+.modal-box select {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.modal-box input:focus,
+.modal-box select:focus {
+  border-color: #4b7bec;
+}
+
+/* Modal Buttons */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.modal-actions button {
+  padding: 10px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.modal-actions button[type="submit"] {
+  background-color: #4b7bec;
+  color: white;
+}
+
+.modal-actions button[type="submit"]:hover {
+  background-color: #3867d6;
+}
+
+.cancel-btn {
+  background-color: #eee;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background-color: #ccc;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .modal-box {
+    padding: 1.5rem;
+  }
+
+  .modal-box h3 {
+    font-size: 1.25rem;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+
+  .modal-actions button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,321 @@
+/* AdditionalInfo.css */
+
+/* Reset basics */
+  *{
+    font-family: "Montserrat", sans-serif;
+  
+  }
+  
+
+.additional-info-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px 35px;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+  color: #222;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1d72b8;
+}
+
+/* Form Box & Labels */
+.form-box label {
+  display: block;
+  font-weight: 600;
+  margin: 20px 0 8px;
+  color: #333;
+}
+
+.form-box textarea,
+.form-box input[type="text"],
+.form-box input[type="number"],
+.form-box input[type="date"],
+.form-box select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1.8px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  resize: vertical;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease;
+  color: #222;
+}
+
+.form-box textarea:focus,
+.form-box input[type="text"]:focus,
+.form-box input[type="number"]:focus,
+.form-box input[type="date"]:focus,
+.form-box select:focus {
+  border-color: #1d72b8;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(29, 114, 184, 0.3);
+}
+
+/* Duration fields layout */
+.duration-fields {
+  margin-top: 15px;
+}
+
+.duration-inputs {
+  display: flex;
+  gap: 15px;
+  margin-top: 6px;
+}
+
+.duration-inputs input {
+  flex: 1;
+}
+
+/* Buttons wrapper */
+.submit-wrapper {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.submit-btn,
+.open-cert-btn,
+.download-btn {
+  background-color: #1d72b8;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(29, 114, 184, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover,
+.open-cert-btn:hover,
+.download-btn:hover {
+  background-color: #155d8b;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.38);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: white;
+  max-width: 460px;
+  width: 100%;
+  border-radius: 16px;
+  padding: 30px 30px 40px;
+  position: relative;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #1d72b8;
+}
+
+.modal-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #1d72b8;
+  text-align: center;
+}
+
+/* Certificate image */
+.certificate-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-desc {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* Certificate form inside modal */
+.certificate-form label {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.certificate-form input[type="text"],
+.certificate-form input[type="number"],
+.certificate-form input[type="date"],
+.certificate-form select {
+  margin-top: 6px;
+  padding: 10px 14px;
+  border: 1.8px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+  background-color: #fafafa;
+}
+
+.certificate-form input[type="text"]:focus,
+.certificate-form input[type="number"]:focus,
+.certificate-form input[type="date"]:focus,
+.certificate-form select:focus {
+  border-color: #1d72b8;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(29, 114, 184, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .duration-inputs {
+    flex-direction: column;
+  }
+
+  .submit-wrapper {
+    flex-direction: column;
+  }
+
+  .submit-btn,
+  .open-cert-btn,
+  .download-btn {
+    width: 100%;
+  }
+}
+/* ✅ Success Modal Overlay */
+.success-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 62, 80, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ✅ Modal Box */
+.success-modal .modal-box {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  animation: scaleIn 0.2s ease-in-out;
+}
+
+.success-modal h3 {
+  color: #2ecc71;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.success-modal p {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.success-modal button {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.success-modal button:hover {
+  background-color: #27ae60;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    background-color: rgba(44, 62, 80, 0);
+  }
+  to {
+    background-color: rgba(44, 62, 80, 0.6);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.back-button {
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 10px 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #e6e6e6;
+  border-color: #999;
+}
+
+.open-cert-btn {
+  background-color: #0077ff;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.open-cert-btn:hover {
+  background-color: #005ecc;
+}

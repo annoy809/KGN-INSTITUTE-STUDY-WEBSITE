@@ -1,0 +1,124 @@
+/* Announcement Banner */
+.announcement-banner {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  border: 1.5px solid #eee;
+  padding: 24px 32px;
+  margin-bottom: 28px;
+  gap: 22px;
+}
+
+.announcement-banner-icon {
+  background: #e8edfa;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.announcement-banner-text {
+  flex: 1;
+}
+
+.announcement-banner-title {
+  color: #3f63e0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.announcement-banner-desc {
+  color: #888;
+  font-size: 15px;
+}
+
+.announcement-banner-btn {
+  background: #3f63e0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.announcement-banner-btn:hover {
+  background: #2747b0;
+}
+
+/* Filters */
+.announcement-filters {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 18px;
+}
+
+.announcement-filter-label {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.announcement-filter-select {
+  padding: 7px 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #fff;
+  color: #333;
+  min-width: 120px;
+}
+
+.announcement-date-input-wrap {
+  position: relative;
+}
+
+.announcement-date-input {
+  padding: 7px 34px 7px 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #fff;
+  color: #333;
+  min-width: 120px;
+}
+
+.announcement-date-icon {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  font-size: 18px;
+  color: #3f63e0;
+  pointer-events: none;
+}
+
+/* Table */
+.announcement-table {
+  background: #fff;
+  border-radius: 10px;
+  border: 1.5px solid #eee;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.announcement-table-header {
+  display: flex;
+  background: #f6f8fa;
+  padding: 14px 32px;
+  font-weight: 500;
+  color: #888;
+  font-size: 15px;
+}
+
+.announcement-table-date {
+  width: 180px;
+}
+
+.announcement-table-title {
+  flex: 1;
+}

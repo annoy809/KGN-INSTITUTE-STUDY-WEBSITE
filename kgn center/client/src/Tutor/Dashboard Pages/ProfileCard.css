@@ -1,0 +1,181 @@
+/* ===============================
+   ⭐ General Reset
+================================*/
+
+
+/* ===============================
+   ⭐ Mobile Hamburger Button
+================================*/
+.mobile-hamburger {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 2000;
+  font-size: 28px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  padding: 8px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Show hamburger only on mobile */
+@media (max-width: 768px) {
+  .mobile-hamburger {
+    display: block;
+  }
+}
+
+/* ===============================
+   ⭐ Overlay when Drawer Opens
+================================*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(3px);
+  z-index: 1500;
+}
+
+/* ===============================
+   ⭐ Sidebar Wrapper (for animation)
+================================*/
+.sidebar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 260px;
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+  z-index: 2001;
+}
+
+/* When open */
+.sidebar-wrapper.open {
+  transform: translateX(0);
+}
+
+/* Desktop — sidebar stays open */
+@media (min-width: 769px) {
+  .sidebar-wrapper {
+    transform: translateX(0) !important;
+    position: relative;
+  }
+}
+
+/* ===============================
+   ⭐ Actual Sidebar UI
+================================*/
+.student-sidebar {
+  height: 100%;
+  width: 100%;
+  padding: 25px 20px;
+  overflow-y: auto;
+  
+  /* iOS Glassmorphism */
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  
+  box-shadow: 6px 0 25px rgba(0,0,0,0.1);
+}
+
+/* ===============================
+   ⭐ Profile Section
+================================*/
+.profile-section {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.avatar img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   ⭐ Menu Items
+================================*/
+.nav-main {
+  list-style: none;
+}
+
+.nav-item {
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+
+  border-radius: 12px;
+  transition: 0.25s;
+  
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Hover */
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Active */
+.nav-item.active {
+  background: rgba(72, 121, 255, 0.35);
+  color: #0037ff;
+  font-weight: 600;
+}
+
+/* Locked menu (Zoom Meetings) */
+.nav-item.locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Divider */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 18px 0;
+}
+
+/* Logout styling */
+.logout-item {
+  color: red;
+  font-weight: 600;
+}
+
+/* Red notification dot for meetings */
+.red-dot {
+  width: 9px;
+  height: 9px;
+  background: red;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+/* Crown icon for locked */
+.lock-icon {
+  margin-left: auto;
+}
+
+/* ICON */
+.icon {
+  font-size: 18px;
+}

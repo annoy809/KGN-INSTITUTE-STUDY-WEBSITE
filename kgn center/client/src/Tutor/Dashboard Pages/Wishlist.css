@@ -1,0 +1,226 @@
+/* ======================= 🌟 WISHLIST MAIN CONTAINER ======================= */
+.wishlist-container {
+  padding: 3rem 3.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #1a1a1a;
+  max-width: 1320px;
+  margin: 0 auto 3rem;
+  transition: all 0.4s ease;
+}
+
+.wishlist-title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.85; }
+  50% { opacity: 1; }
+  100% { opacity: 0.85; }
+}
+
+
+/* ======================= 🗂 GRID ======================= */
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 2rem;
+}
+
+
+/* ======================= 💎 CARD (Premium Glass) ======================= */
+.wishlist-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 1.7rem;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 18px 45px rgba(99, 102, 241, 0.25);
+}
+
+
+/* ======================= 🖼 IMAGE ======================= */
+.wishlist-card-image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-top-left-radius: 1.7rem;
+  border-top-right-radius: 1.7rem;
+  transition: transform 0.35s ease;
+}
+
+.wishlist-card:hover .wishlist-card-image {
+  transform: scale(1.05);
+}
+
+
+/* ======================= 🔥 DISCOUNT BADGE ======================= */
+.wishlist-discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(90deg, #fde047, #fbbf24);
+  color: #78350f;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+
+/* ======================= 📄 CONTENT ======================= */
+.wishlist-card-content {
+  padding: 1rem 1.2rem;
+}
+
+.wishlist-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.4rem;
+}
+
+.wishlist-card-description {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+
+/* ======================= 💰 PRICE ======================= */
+.wishlist-course-price {
+  margin: 0.8rem 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wishlist-main-price {
+  color: #1e293b;
+  font-weight: 800;
+}
+
+.wishlist-regular-price {
+  color: #6b7280;
+  text-decoration: line-through;
+  font-size: 0.9rem;
+}
+
+
+/* ======================= 🎛 BUTTONS ======================= */
+.wishlist-card-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.wishlist-btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.wishlist-btn.remove {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.wishlist-btn.remove:hover {
+  background: #fecaca;
+  transform: translateY(-3px);
+}
+
+.wishlist-btn.buy {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+.wishlist-btn.buy:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
+}
+
+
+/* ======================= 🚫 EMPTY STATE ======================= */
+.wishlist-empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.wishlist-empty-image {
+  width: 160px;
+  opacity: 0.85;
+}
+
+.wishlist-empty-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #444;
+}
+
+
+/* ======================= 📱 MOBILE RESPONSIVE ======================= */
+@media (max-width: 768px) {
+  .wishlist-container {
+    padding: 2rem 1rem;
+  }
+
+  .wishlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .wishlist-card {
+    border-radius: 1.3rem;
+  }
+
+  .wishlist-card-image {
+    height: 130px;
+    border-top-left-radius: 1.3rem;
+    border-top-right-radius: 1.3rem;
+  }
+
+  .wishlist-card-content {
+    padding: 0.8rem;
+  }
+
+  .wishlist-card-title {
+    font-size: 0.95rem;
+  }
+
+  .wishlist-card-description {
+    font-size: 0.8rem;
+  }
+
+  .wishlist-course-price {
+    font-size: 0.9rem;
+  }
+
+  .wishlist-btn {
+    padding: 0.55rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

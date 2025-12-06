@@ -1,0 +1,87 @@
+/* ==============================
+   🌟 Premium Smooth Preloader
+   ============================== */
+
+.custom-preloader {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #ffffff 0%, #f8f9ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+  overflow: hidden;
+}
+
+/* 🔄 Spinner Container */
+.spinner-container {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: popIn 0.8s ease forwards;
+}
+
+/* 🌈 Rotating Ring */
+.rotating-ring {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid #6d28d9;
+  border-right: 4px solid #a855f7;
+  border-bottom: 4px solid #3b82f6;
+  border-left: 4px solid #9333ea;
+  animation: rotateRing 1.6s linear infinite;
+  box-shadow: 0 0 16px rgba(109, 40, 217, 0.3);
+}
+
+/* 💎 Inner Glow Ring */
+.rotating-ring::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(168, 85, 247, 0.3);
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
+
+/* 🌀 Logo Styling */
+.preloader-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  animation: floatLogo 2.2s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(109, 40, 217, 0.4));
+}
+
+/* ✨ Keyframes */
+@keyframes rotateRing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* 🔚 Fade Out Animation */
+.custom-preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}

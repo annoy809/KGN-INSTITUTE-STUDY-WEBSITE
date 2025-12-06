@@ -1,0 +1,79 @@
+.dashboard-ui-container {
+  padding: 2rem;
+  background-color: #f9fafb;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+.dashboard-ui-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-ui-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.dashboard-ui-btn {
+  background: #ffffff;
+  border: 1.5px solid #3b82f6;
+  color: #3b82f6;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dashboard-ui-btn:hover {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.dashboard-ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.dashboard-ui-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.dashboard-ui-card:hover {
+  transform: translateY(-4px);
+}
+
+.dashboard-ui-icon {
+  font-size: 2rem;
+  background: #eef2ff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-ui-value {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.dashboard-ui-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}

@@ -1,0 +1,123 @@
+/* ===========================
+   PREMIUM MEMBERSHIP SECTION
+=========================== */
+
+.membership-section {
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #eef2ff, #f5f7ff);
+  min-height: 100vh;
+  text-align: center;
+}
+
+.membership-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin-bottom: 2rem;
+}
+
+/* Cards Wrapper */
+.plan-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- Card ---------- */
+.plan-card {
+  width: 310px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  border-radius: 18px;
+  padding: 1.8rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  animation: fadeUp 0.5s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 30px rgba(0,0,0,0.15);
+}
+
+/* Card Title */
+.plan-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4F46E5;
+}
+
+/* Pricing */
+.price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  margin-top: 10px;
+}
+
+/* Features List */
+.plan-card ul {
+  text-align: left;
+  margin: 1rem 0 1.5rem;
+  list-style: none;
+  padding: 0;
+  max-height: 270px;
+  overflow-y: auto;
+}
+
+.plan-card ul li {
+  padding: 6px 0;
+  font-size: 0.95rem;
+  color: #333;
+  padding-left: 20px;
+  position: relative;
+}
+
+.plan-card ul li::before {
+  content: "✔";
+  color: #4F46E5;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* ----------- Button ---------- */
+.plan-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4F46E5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.plan-btn:hover {
+  background: #4338CA;
+  transform: translateY(-3px);
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll styling */
+.plan-card ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.plan-card ul::-webkit-scrollbar-thumb {
+  background: #c3c7ff;
+  border-radius: 10px;
+}

@@ -1,0 +1,158 @@
+/* ================== 🌟 Search Page Container ================== */
+.search-page-container {
+  padding: 3rem 3.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+
+  color: #1a1a1a;
+  max-width: 1320px;
+  margin: 0 auto 3rem;
+  transition: all 0.4s ease;
+}
+
+/* ================== ✨ Title ================== */
+.search-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: shimmerText 6s linear infinite;
+}
+
+.search-title span {
+  color: #6366f1;
+}
+
+@keyframes shimmerText {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.search-sub {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* ================== ⏳ Loading / No Results ================== */
+.loading-text,
+.no-search-result {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  padding: 2rem 0;
+}
+
+/* ================== 🔍 Search Results Grid ================== */
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* ================== 📚 Search Card ================== */
+.search-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1.7rem;
+  overflow: hidden;
+  min-width: 270px;
+  max-width: 270px;
+  flex: 0 0 auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s ease;
+  cursor: pointer;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.search-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(99, 102, 241, 0.18);
+}
+
+/* ================== 🎨 Card Image ================== */
+.search-card-img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-top-left-radius: 1.7rem;
+  border-top-right-radius: 1.7rem;
+  transition: transform 0.35s ease;
+}
+
+.search-card:hover .search-card-img {
+  transform: scale(1.06);
+}
+
+/* ================== 📄 Card Content ================== */
+.search-card-content {
+  padding: 1rem 1.3rem 1.4rem;
+}
+
+.search-card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #111;
+}
+
+.search-card-content p {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* ================== 💰 Price ================== */
+.search-price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-price .new {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0f1724;
+}
+
+.search-price .old {
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+/* ================== 💎 Hover Overlay ================== */
+.search-card:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  pointer-events: none;
+  border-radius: inherit;
+  transition: all 0.4s ease;
+}
+
+/* ================== 📱 Responsive ================== */
+@media (max-width: 768px) {
+  .search-page-container {
+    padding: 2rem 1.2rem;
+  }
+
+  .search-title {
+    font-size: 1.5rem;
+  }
+
+  .search-sub {
+    font-size: 1rem;
+  }
+
+  .search-grid {
+    gap: 1.2rem;
+  }
+}

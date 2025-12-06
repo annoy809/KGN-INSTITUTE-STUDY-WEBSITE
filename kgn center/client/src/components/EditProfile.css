@@ -1,0 +1,176 @@
+.edit-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 15px;
+  background: #f7f9fb;
+  min-height: 100vh;
+}
+
+.glass-card {
+  background: white;
+  padding: 35px 45px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  max-width: 700px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+}
+
+.edit-title {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #1c1d1f;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #6a6f73;
+  margin-bottom: 25px;
+}
+
+.profile-photo-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.photo-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.profile-photo-preview {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+  transition: 0.3s;
+}
+
+.profile-photo-preview:hover {
+  transform: scale(1.05);
+}
+
+.upload-btn {
+  margin-top: 8px;
+  display: inline-block;
+  background-color: #5624d0;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+  background-color: #3b0ca3;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1c1d1f;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #5624d0;
+  outline: none;
+}
+
+.bio-section textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.section-heading {
+  margin-top: 10px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1c1d1f;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.save-btn {
+  background-color: #5624d0;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.save-btn:hover {
+  background-color: #3b0ca3;
+}
+
+.cancel-btn {
+  background: #e5e7eb;
+  color: #1c1d1f;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cancel-btn:hover {
+  background: #d1d5db;
+}
+
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glass-card {
+    padding: 25px 20px;
+  }
+
+  .edit-title {
+    font-size: 1.6rem;
+  }
+}

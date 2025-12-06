@@ -1,0 +1,114 @@
+.schedule-box {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 16px 20px;
+    max-width: 320px;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .header h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .scheduled-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2563eb;
+    margin: 10px 0 6px;
+  }
+  
+  .icon-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .icon-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+    transition: transform 0.2s ease;
+  }
+  
+  .icon-actions button:hover {
+    transform: scale(1.2);
+    color: #2563eb;
+  }
+  
+  .date-display {
+    background: #e0f7f4;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    color: #1a202c;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .datetime-picker {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 22px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #3b82f6;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(18px);
+  }
+  

@@ -1,0 +1,155 @@
+/* AdminNavbar.css */
+
+/* Root theme variables for light & dark modes */
+:root {
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #1e1e2f;
+  --color-text-light: #222222;
+  --color-text-dark: #f5f5f5;
+  --color-primary: #4f46e5; /* Indigo */
+  --color-accent: #6366f1;
+  --color-hover: rgba(99, 102, 241, 0.1);
+  --transition-speed: 0.3s;
+}
+
+/* Navbar container */
+.admin-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Dark mode */
+body.dark-mode .admin-navbar {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Left section */
+.admin-navbar .left .title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: inherit;
+}
+
+/* Right section */
+.admin-navbar .right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Icon general style */
+.icon {
+  width: 22px;
+  height: 22px;
+  color: inherit;
+  cursor: pointer;
+  transition: transform var(--transition-speed), color var(--transition-speed);
+}
+
+.icon:hover {
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 6px;
+  transition: background-color var(--transition-speed);
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-hover);
+}
+
+/* Notification icon */
+.notif {
+  position: relative;
+}
+
+.notif .icon {
+  position: relative;
+}
+
+/* Optional: add a notification dot */
+.notif::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: #ef4444; /* Red alert */
+  border-radius: 50%;
+  border: 2px solid var(--color-bg-light);
+  opacity: 0;
+  transition: opacity var(--transition-speed);
+}
+
+body.dark-mode .notif::after {
+  border-color: var(--color-bg-dark);
+}
+
+/* Show dot if notifications exist (optional JS toggle) */
+.notif.active::after {
+  opacity: 1;
+}
+
+/* Profile section */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background-color var(--transition-speed);
+}
+
+.profile:hover {
+  background-color: var(--color-hover);
+}
+
+.profile .profile-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.admin-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: inherit;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .admin-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .admin-navbar .right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .admin-name {
+    display: none; /* Hide text to save space */
+  }
+}

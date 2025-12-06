@@ -1,0 +1,450 @@
+/* =========================
+   CourseDetails.css - Polished
+============================ */
+
+/* --- Color Variables --- */
+:root {
+  --primary-color: #4A55A2;
+  --primary-hover: #37418a;
+  --secondary-color: #7895CB;
+  --background-light: #F0F2F5;
+  --card-background: #FFFFFF;
+  --text-dark: #333333;
+  --text-medium: #555555;
+  --text-light: #777777;
+  --border-color: #E0E0E0;
+  --success-color: #28A745;
+  --highlight-color: #D1D9F3;
+  --skill-tag-bg: #EAF7ED;
+  --skill-tag-text: #1E6C3B;
+}
+
+/* --- Global Reset --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+/* =========================
+   Container & Layout
+============================ */
+.cd-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Banner --- */
+.cd-banner {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  padding: 25px;
+  color: var(--card-background);
+  position: relative;
+  overflow: hidden;
+}
+
+.cd-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+}
+
+.cd-banner-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.cd-banner-content h1 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.cd-banner-content p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* =========================
+   Main Layout
+============================ */
+.cd-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.cd-left {
+  flex: 3;
+  min-width: 300px;
+  max-width: calc(100% - 30px - 300px);
+}
+
+.cd-right {
+  position: sticky;
+  top: 25px;
+  align-self: flex-start;
+  flex-basis: 300px;
+  min-width: 250px;
+}
+
+/* =========================
+   Left Section Cards
+============================ */
+.cd-left section {
+  background-color: var(--card-background);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
+}
+
+.cd-left section h2 {
+  font-size: 18px;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.cd-left section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-medium);
+}
+
+.cd-left section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cd-left section ul li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-medium);
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.cd-left section ul li::before {
+  content: '•';
+  color: var(--primary-color);
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* --- Read More / Less Buttons --- */
+.cd-left section button {
+  font-size: 14px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background: none;
+  color: var(--primary-color);
+  border: none;
+}
+
+.cd-left section button:hover {
+  text-decoration: underline;
+  color: var(--primary-hover);
+}
+
+/* =========================
+   What You'll Learn Cards
+============================ */
+.cd-learn-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 15px;
+}
+
+.cd-learn-card {
+  background-color: var(--highlight-color);
+  border-left: 5px solid var(--primary-color);
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-dark);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cd-learn-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.cd-learn-card p {
+  margin: 0;
+}
+
+/* =========================
+   Skills Tags
+============================ */
+.cd-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.cd-skill-tag {
+  background-color: var(--skill-tag-bg);
+  color: var(--skill-tag-text);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cd-skill-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   Topics Accordion
+============================ */
+.cd-topics-list {
+  margin-top: 20px;
+}
+
+.cd-topic {
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.cd-topic-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--border-color);
+  color: var(--text-dark);
+  transition: background-color 0.3s ease;
+}
+
+.cd-topic-title:hover {
+  background-color: var(--text-light);
+}
+
+.cd-topic-details {
+  padding: 15px 20px;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--card-background);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.cd-topic.open .cd-topic-details {
+  max-height: 600px; /* allow longer topics */
+  padding: 15px 20px;
+}
+
+/* =========================
+   Right Sidebar / Cards
+============================ */
+.cd-right .cd-card {
+  background-color: var(--card-background);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.cdetail-intro-video {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.cd-right .cd-card p {
+  font-size: 14px;
+  color: var(--text-medium);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cd-right .cd-card p strong {
+  color: var(--text-dark);
+  font-size: 16px;
+}
+
+.cd-right .cd-card h3 {
+  font-size: 18px;
+  color: var(--text-dark);
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.cd-right .cd-card p svg {
+  color: var(--primary-color);
+  font-size: 16px;
+}
+
+.cd-enroll {
+  background-color: var(--primary-color);
+  color: var(--card-background);
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.cd-enroll:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.cd-enroll:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================
+   Modal
+============================ */
+.cd-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.cd-modal {
+  background-color: var(--card-background);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 0.35s ease-out;
+}
+
+.cd-modal h2 {
+  color: var(--success-color);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.cd-modal p {
+  font-size: 14px;
+  color: var(--text-medium);
+  margin-bottom: 25px;
+}
+
+.cd-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cd-modal-btn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+.cd-modal-btn.primary {
+  background-color: var(--primary-color);
+  color: var(--card-background);
+}
+
+.cd-modal-btn.primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.cd-modal-btn.secondary {
+  background-color: var(--border-color);
+  color: var(--text-dark);
+}
+
+.cd-modal-btn.secondary:hover {
+  background-color: var(--text-light);
+  transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   Responsive Adjustments
+============================ */
+@media (max-width: 992px) {
+  .cd-main { flex-direction: column; }
+  .cd-left, .cd-right { flex: none; width: 100%; }
+  .cd-right { position: static; top: auto; align-self: auto; }
+  .cd-banner { height: 250px; }
+  .cd-banner-content h1 { font-size: 22px; }
+}
+
+@media (max-width: 768px) {
+  .cd-container { padding: 15px; }
+  .cd-banner { height: 200px; }
+  .cd-banner-content h1 { font-size: 18px; }
+  .cd-included h2, .cd-left section h2, .cd-right .cd-card h3 { font-size: 16px; }
+  .cd-included ul { grid-template-columns: 1fr; }
+  .cd-learn-cards { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .cd-banner { height: 150px; }
+  .cd-banner-content h1 { font-size: 16px; }
+  .cd-included h2, .cd-left section h2, .cd-right .cd-card h3 { font-size: 14px; }
+  .cd-modal h2 { font-size: 16px; }
+  .cd-modal-actions { flex-direction: column; gap: 10px; }
+  .cd-modal-btn { width: 100%; padding: 15px; }
+}

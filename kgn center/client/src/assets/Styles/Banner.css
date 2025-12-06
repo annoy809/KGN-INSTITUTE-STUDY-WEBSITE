@@ -1,0 +1,285 @@
+/* ===================== Banner Section ===================== */
+.discount-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 4rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  transition: all 0.4s ease;
+}
+
+/* ===== Carousel Arrows ===== */
+/* ================== iOS-style Carousel Arrows ================== */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #1c1c1e;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.3, 1);
+  z-index: 12;
+}
+
+.carousel-arrow:hover {
+  transform: translateY(-50%) scale(1.15);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-left {
+  left: 12px;
+}
+
+.arrow-right {
+  right: 12px;
+}
+
+
+/* ===== Card Styling ===== */
+.card.logged {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1300px;
+  min-height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Overlay for subtle dark effect */
+.card.logged::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  z-index: 0;
+}
+
+/* Right side content */
+.card-right {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+/* Title */
+.card-right h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+}
+.card-right .highlight {
+  color: #4f46e5;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0 0.3rem;
+  border-radius: 6px;
+}
+
+/* Subtitle */
+.subtext {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+/* Buttons Group */
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Primary Button - soft iOS style */
+.btn.primary {
+  background: #fff;
+  color: #4f46e5;
+  font-weight: 600;
+  padding: 0.75rem 1.8rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.15);
+  transition: all 0.25s ease-in-out;
+}
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2);
+}
+
+/* Secondary Button - soft outline style */
+.btn.secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.8rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.25s ease-in-out;
+}
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Disclaimer text */
+.disclaimer {
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ===== Mobile Responsiveness ===== */
+/* ===================== Banner Section Mobile Responsive ===================== */
+
+/* Tablets & medium screens */
+@media (max-width: 1024px) {
+  .card.logged {
+    padding: 2rem 1.5rem;
+    min-height: 300px;
+  }
+
+  .card-right h1 {
+    font-size: 2rem;
+  }
+
+  .subtext {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .btn-group {
+    gap: 0.8rem;
+  }
+}
+
+/* Phones (768px and below) */
+@media (max-width: 768px) {
+  .card.logged {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 420px;
+    padding: 2.5rem 1.5rem;
+    border-radius: 18px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .card-right {
+    max-width: 95%;
+    z-index: 2;
+  }
+
+  .card-right h1 {
+    font-size: 1.7rem;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .card-right .highlight {
+    color: #a5b4fc;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+  }
+
+  .subtext {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .btn.primary,
+  .btn.secondary {
+    width: 90%;
+    max-width: 320px;
+    border-radius: 30px;
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
+}
+
+/* Extra small phones (360px and below) */
+@media (max-width: 360px) {
+  .card.logged {
+    padding: 1.8rem 1rem;
+    min-height: 360px;
+    border-radius: 16px;
+  }
+
+  .card-right h1 {
+    font-size: 1.4rem;
+    line-height: 1.25;
+    margin-bottom: 0.8rem;
+  }
+
+  .card-right .highlight {
+    font-size: 0.9rem;
+    padding: 0.15rem 0.4rem;
+  }
+
+  .subtext {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 1.2rem;
+  }
+
+  .btn.primary,
+  .btn.secondary {
+    width: 95%;
+    max-width: 280px;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .btn-group {
+    gap: 0.6rem;
+  }
+
+  .disclaimer {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+  }
+}

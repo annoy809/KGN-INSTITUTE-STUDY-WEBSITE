@@ -1,0 +1,22 @@
+/* ===============================
+   🌟 Dashboard Layout (Fixed Sidebar + Scrollable Content)
+================================= */
+
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+/* Main content scrolls independently */
+.dashboard-main {
+  flex: 1;
+  overflow-y: auto;
+  background: linear-gradient(180deg, #f9fafb, #edf2f7);
+  padding: 20px 30px;
+  scrollbar-width: none;
+}
+.dashboard-main::-webkit-scrollbar {
+  display: none;
+}

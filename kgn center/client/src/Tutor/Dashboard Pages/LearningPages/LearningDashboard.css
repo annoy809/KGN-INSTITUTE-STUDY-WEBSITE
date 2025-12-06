@@ -1,0 +1,349 @@
+/* ========== Global Layout ========== */
+.ld-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  overflow: hidden;
+}
+
+/* ========== Sidebar ========== */
+.ld-sidebar {
+  width: 300px;
+  background-color: #ffffff;
+  padding: 20px 16px;
+  border-right: 1px solid #000000;
+  overflow-y: auto;
+}
+
+.ld-course-title {
+  font-size: 1.225rem; /* 18px */
+  font-weight: bolder !important; 
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+/* ========== Topics ========== */
+.ld-topic {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  background-color: #f9fafb;
+  transition: box-shadow 0.3s ease;
+}
+
+.ld-topic-header {
+  padding: 12px 16px;
+  background-color: #e2e8f0;
+  font-size: 0.8rem; /* ~15px */
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1f2937;
+}
+
+.ld-topic-header:hover {
+  background-color: #dbeafe;
+}
+
+.ld-topic-body {
+  padding: 10px 14px;
+  background-color: #ffffff;
+}
+
+/* ========== Content Cards ========== */
+.ld-content-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  font-size: 0.77rem; /* 14px */
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #374151;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.ld-content-card:hover {
+  background-color: #f0f9ff;
+  transform: translateX(2px);
+}
+
+.ld-icon {
+  color: #3b82f6;
+  font-size: 1rem;
+}
+
+/* ========== Main Content Area ========== */
+.ld-content {
+  flex: 1;
+  padding: 32px;
+  overflow-y: auto;
+  background-color: #f9fafb;
+}
+
+/* ========== Lesson Title & Body ========== */
+.ld-title {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.ld-body {
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.7;
+  color: #334155;
+  margin-top: 12px;
+}
+
+/* ========== Video Player ========== */
+.ld-video {
+  width: 100%;
+  max-height: 480px;
+  background-color: #000;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+/* ========== Placeholder View ========== */
+.ld-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 0.9375rem;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.ld-no-video {
+  font-style: italic;
+  color: #9ca3af;
+}
+
+/* ========== Block View (Quiz/Assignment) ========== */
+.ld-block {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* ========== Loading Text ========== */
+.ld-loading {
+  font-size: 1rem;
+  color: #64748b;
+  padding: 40px;
+  text-align: center;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .ld-container {
+    flex-direction: column;
+  }
+
+  .ld-sidebar {
+    width: 100%;
+    max-height: 260px;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .ld-content {
+    padding: 24px 16px;
+  }
+
+  .ld-topic-header h3 {
+    font-size: 0.9rem;
+  }
+
+  .ld-course-title {
+    font-size: 1rem;
+  }
+
+  .ld-title {
+    font-size: 1.125rem;
+  }
+
+  .ld-body {
+    font-size: 0.875rem;
+  }
+}
+.ld-quiz-form,
+.ld-assignment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.ld-quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: background 0.2s ease;
+}
+
+.ld-quiz-option:hover {
+  background-color: #e0f2fe;
+}
+
+.ld-btn {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ld-btn:hover {
+  background-color: #2563eb;
+}
+
+.ld-quiz-result {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.ld-quiz-result.correct {
+  color: green;
+}
+
+.ld-quiz-result.wrong {
+  color: red;
+}
+
+.ld-textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  resize: vertical;
+}
+.ld-quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.ld-quiz-timer {
+  font-size: 0.9rem;
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.ld-quiz-options {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.ld-quiz-option {
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ld-quiz-option:hover {
+  background: #e0f2fe;
+}
+
+.ld-quiz-option.selected {
+  background: #3b82f6;
+  color: white;
+  font-weight: bold;
+}
+
+.ld-feedback {
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.ld-feedback.correct {
+  color: #16a34a;
+}
+
+.ld-feedback.wrong {
+  color: #dc2626;
+}
+
+.ld-input,
+.ld-textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.ld-btn {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ld-btn:hover {
+  background-color: #1d4ed8;
+}
+.ld-input,
+.ld-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.ld-input:focus,
+.ld-textarea:focus {
+  border-color: #3b82f6;
+}
+
+.ld-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ld-btn:hover:enabled {
+  background-color: #2563eb;
+}
+
+.ld-btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}

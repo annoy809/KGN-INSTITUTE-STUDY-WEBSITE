@@ -1,0 +1,51 @@
+.new-admission-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.new-admission-container h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.new-admission-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.new-admission-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.new-admission-form input,
+.new-admission-form select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.new-admission-form button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-admission-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-message {
+  margin-top: 1rem;
+  font-weight: 500;
+}

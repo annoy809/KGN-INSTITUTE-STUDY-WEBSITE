@@ -1,0 +1,198 @@
+.coupon-manager-container {
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.coupon-manager-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 180px;
+}
+
+.coupon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.coupon-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.coupon-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.coupon-card p {
+  margin: 6px 0;
+}
+
+.card-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #2196f3;
+  color: white;
+}
+
+.delete-btn {
+  background: #f44336;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters input,
+  .filters select {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  margin: 0 4px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background: #4caf50;
+  color: white;
+}
+.coupon-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.pagination button.active {
+  background-color: #333;
+  color: #fff;
+}
+.coupon-status {
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  width: fit-content;
+  margin-top: 5px;
+}
+
+.coupon-status.active {
+  background-color: #d4f7d4;
+  color: #137c13;
+}
+
+.coupon-status.expired {
+  background-color: #f8dada;
+  color: #c40e0e;
+}
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 8px;
+  width: fit-content;
+}
+
+.badge.usable {
+  background-color: #d4f4dd;
+  color: #1e7e34;
+}
+
+.badge.expired {
+  background-color: #f8d7da;
+  color: #a30000;
+}
+/* CouponCard.css */
+.coupon-card {
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+.coupon-card.expired {
+  opacity: 0.6;
+}
+.status-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #28a745;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.status-badge.expired {
+  background: #dc3545;
+}
+.coupon-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.coupon-actions button {
+  padding: 5px 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,136 @@
+/* =======================================================
+ 🌟 Dashboard — Premium Modern Theme (2025 Edition)
+======================================================= */
+
+/* ---------- General Layout ---------- */
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc, #edf2f7);
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.loading-message {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-top: 30px;
+}
+
+/* ---------- Stats Grid ---------- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 70px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* ---------- Meeting StateCard (Premium Style) ---------- */
+.meeting-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.meeting-value.unlocked {
+  color: #2563eb;
+}
+
+.meeting-value.unlocked:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* 🔴 Small red dot for active meeting indicator */
+.meeting-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ef4444;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+}
+
+/* ---------- Locked Meeting (Premium Style) ---------- */
+
+
+.meeting-value.locked:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* 👑 Premium Icon — Gold King Crown Style */
+.premium-icon {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 6px;
+}
+
+
+/* ---------- Meetings Section ---------- */
+.meetings-section {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 50px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.meetings-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 1.5rem;
+    margin-top: 60px;
+  }
+
+  .stats-grid {
+    gap: 15px;
+  }
+
+  .meeting-value.locked {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .meetings-section {
+    margin-top: 35px;
+    padding: 18px;
+  }
+}
+

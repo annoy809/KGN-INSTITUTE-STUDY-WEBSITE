@@ -1,0 +1,775 @@
+
+
+/* ===============================
+   🌟 NAVBAR BASE (iOS Glass)
+================================*/
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1100;
+  transition: background 0.4s ease, color 0.4s ease;
+  --text-color: #000;
+}
+
+
+/* 🌙 Darkened variant (when background changes dynamically) */
+.navbar.dark {
+  background: rgba(20, 20, 20, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.3);
+  --text-color: #fff;
+}
+
+/* Shared text color */
+.navbar * {
+  color: var(--text-color);
+  transition: color 0.35s ease;
+}
+
+/* Logo animation */
+.navbar-logo img {
+  height: 40px;
+  transition: transform 0.3s ease, filter 0.4s ease;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+}
+.navbar-logo img:hover {
+  transform: scale(1.06);
+}
+
+.navbar-container {
+  width: 100%;
+ max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===============================
+   🔹 LEFT SECTION (LOGO + SEARCH)
+================================*/
+.navbar-left-section {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex: 1;
+}
+
+.navbar-logo img {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+}
+.navbar-logo img:hover {
+  transform: scale(1.06);
+}
+
+
+
+
+
+/* ===============================
+   🔍 SEARCH BAR
+================================*/
+.navbar-search-wrapper {
+  flex: 1;
+  position: relative;
+  max-width: 550px;
+  border-radius: 30px;
+}
+
+.navbar-search {
+  width: 100%;
+  padding: 8px 40px 8px 14px;
+  border: 1px solid rgba(200, 200, 200, 0.4);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  font-size: 14px;
+  color: #333;
+  transition: all 0.35s ease;
+}
+.navbar-search:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: #007aff;
+  box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.15);
+  outline: none;
+}
+
+/* ===============================
+   🔹 RIGHT SECTION (LINKS + ICONS)
+   iOS Glass Enhanced + Responsive
+================================*/
+.navbar-right-items {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.navbar-link {
+  color: #000; /* ✅ pure black for better readability */
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  transition: all 0.3s ease;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.navbar-link:hover {
+  color: #000; /* stays black */
+  background: rgba(0, 0, 0, 0.05); /* light hover for iOS style */
+  backdrop-filter: blur(10px);
+}
+
+.navbar-cart-icon{
+  font-size: 22px;
+  color: #222;
+  transition: color 0.3s ease;
+}
+.navbar-notification-wrapper {
+  position: relative;
+  margin-right: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-notification-icon {
+  color: #4A55A2; /* your theme color */
+  transition: 0.2s ease;
+}
+
+.navbar-notification-icon:hover {
+  transform: scale(1.12);
+}
+
+.notification-badge {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  background: #ff3b30;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+
+
+/* Cart */
+.navbar-cart-wrapper {
+  position: relative;
+}
+.cart-count-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: linear-gradient(145deg, #ff3b30, #ff6b60);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  box-shadow: 0 0 8px rgba(255, 59, 48, 0.6);
+  animation: pulseBadge 2s infinite;
+}
+@keyframes pulseBadge {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.8; }
+}
+
+/* ===============================
+   👤 PROFILE DROPDOWN (Glass + Motion)
+================================*/
+.navbar-profile-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background 0.25s ease;
+}
+.navbar-profile-wrapper:hover {
+  background: rgba(0, 122, 255, 0.1);
+}
+
+.navbar-profile-pic {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+.navbar-profile-pic:hover {
+  border-color: #007aff;
+  transform: scale(1.06);
+}
+
+/* ==========================
+   🧩 Profile Dropdown (Modern UI)
+========================== */
+
+.profile-dropdown-custom {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: white; 
+  backdrop-filter: blur(28px) saturate(150%);
+  -webkit-backdrop-filter: blur(28px) saturate(150%);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 240px;
+  padding: 12px 0;
+  z-index: 999;
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease-in-out;
+  border: 1px solid rgba(230, 230, 230, 0.7);
+}
+
+/* When dropdown is open */
+.profile-dropdown-custom.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* User name text */
+.profile-name-custom {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  padding: 10px 18px;
+  border-bottom: 1px solid rgba(230, 230, 230, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Dropdown links */
+.profile-link-custom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  color: #333;
+  font-size: 14.5px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* Hover and active state */
+.profile-link-custom:hover {
+  background-color: #f1f1f1;
+}
+
+/* ✏️ Edit Profile Toggle */
+.edit-option {
+  background: #eef6ff;
+  color: #007aff;
+  font-weight: 500;
+}
+
+.edit-option:hover {
+  background: #dbeaff;
+}
+
+/* 💬 Edit Modal Section */
+.profile-edit-modal {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 10px;
+  border-top: 1px solid #eee;
+  animation: fadeIn 0.3s ease;
+}
+
+.profile-edit-modal.open {
+  display: flex;
+}
+
+.profile-edit-modal h4 {
+  margin: 0;
+  color: #007aff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.bio-inputs input,
+.bio-inputs textarea {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  resize: none;
+}
+
+.save-bio-btn {
+  background: #007aff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.save-bio-btn:hover {
+  background: #005adf;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Logout button */
+.logout-custom {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-size: 14.5px;
+  color: #e63946;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logout-custom:hover {
+  background: #fff5f5;
+  color: #d62828;
+  transform: translateX(3px);
+}
+
+/* Icon styles */
+.profile-link-custom svg,
+.logout-custom svg {
+  font-size: 16px;
+  color: inherit;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.profile-link-custom:hover svg,
+.logout-custom:hover svg {
+  color: inherit;
+  transform: scale(1.1);
+}
+.navbar-profile-pic {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.navbar-profile-pic:hover {
+  border-color: #007aff;
+  transform: scale(1.05);
+}
+
+.upload-option {
+  cursor: pointer;
+  color: #007aff;
+}
+
+.upload-option:hover {
+  background: #eef6ff;
+  color: #005adf;
+}
+
+
+/* Navbar user icon (circle) */
+.navbar-user-icon {
+  color: #333;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.navbar-user-:hover {
+  color: #007aff;
+  transform: scale(1.1);
+}
+
+/* ===============================
+   🍔 HAMBURGER ICON (iOS Motion)
+================================*/
+/* ============================================================
+   📚 Grid Menu Button (Professional Category Trigger)
+   Style: iOS Glass • Minimal • EdTech Premium
+============================================================ */
+
+.grid-menu-btn {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+/* Hover Effect */
+.grid-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.55);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Active/Open State */
+.grid-menu-btn.active {
+  background: rgba(59, 130, 246, 0.35); /* soft blue */
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  transform: scale(1.1);
+}
+
+/* Icon Styling */
+.grid-menu-btn svg {
+  color: #1f2937;  /* professional dark */
+  transition: color 0.25s ease;
+}
+
+.grid-menu-btn.active svg {
+  color: #1e40af; /* active state deep blue */
+}
+
+/* Mobile Override */
+@media (max-width: 640px) {
+  .grid-menu-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+}
+
+
+/* ===============================
+   📱 SLIDE-IN SIDEBAR (Right Blur)
+================================*/
+.mobile-sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 998;
+}
+.mobile-sidebar-overlay.show {
+  opacity: 1;
+    backdrop-filter: blur(3px) brightness(0.97);
+  visibility: visible;
+}
+
+/* Sidebar Base */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 88%;
+  max-width: 380px;
+  height: 100vh;
+  /* iOS-style frosted glass */
+  background: rgba(9, 9, 9, 0.1); /* light translucent overlay */
+  backdrop-filter: blur(32px) saturate(180%) contrast(110%) brightness(60%);
+  -webkit-backdrop-filter: blur(32px) saturate(180%) contrast(110%) brightness(90%)!important;
+  /* optional subtle gradient for water effect */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.12) 100%
+  );
+  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.25);
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  transition: right 0.55s cubic-bezier(0.25, 1, 0.5, 1),
+              opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  opacity: 0; /* hidden by default */
+  z-index: 1200;
+}
+
+
+
+.mobile-sidebar.open {
+  right: 0;
+  opacity: 1;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+.close-btn:hover {
+  color: #007aff;
+  transform: rotate(90deg);
+}
+
+/* Sidebar Items */
+.sidebar-categories {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+
+.sidebar-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* Top-level links */
+.sidebar-link {
+  color: #fff!important;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+.sidebar-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+/* Hide dropdown by default */
+.sidebar-dropdown {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-8px);
+  transition: all 0.4s ease;
+}
+
+/* Show dropdown when hovering over parent item */
+.sidebar-item:hover > .sidebar-dropdown {
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Sidebar link hover effect */
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+/* Dropdown link styles */
+.sidebar-dropdown li a {
+  color: #fff;
+  display: block;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+.sidebar-dropdown li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: black;
+  transform: translateX(6px);
+}
+
+/* Optional: rotate the arrow icon when hovered */
+.sidebar-item:hover .arrow {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+
+/* For Webkit browsers (Chrome, Safari, iOS) */
+.sidebar::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Prevent horizontal scroll */
+.sidebar {
+  overflow-x: hidden;
+}
+
+
+/* Footer */
+.sidebar-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.sidebar-footer a,
+.sidebar-footer button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+.sidebar-footer a:hover,
+.sidebar-footer button:hover {
+  color: #007aff;
+}
+/* ===============================
+   📱 RESPONSIVE FIXES
+================================*/
+/* ===============================
+   📱 MOBILE SEARCH BAR ALIGN FIX
+================================*/
+/* -----------------------------
+   🔥 MOBILE NAVBAR FIX
+   All items in 1 row
+------------------------------*/
+@media (max-width: 768px) {
+
+  .navbar-container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .navbar-left-section {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+    .navbar-search-wrapper {
+    width: 100% !important;
+    max-width: 250px !important;
+    margin: 0 !important;
+  }
+
+  .navbar-search {
+    height: 38px !important;
+  }
+
+  /* SEARCH BAR → FULL FLEX */
+  .navbar-search-wrapper.mobile-fix {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-search {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* RIGHT ICONS IN ONE LINE */
+  .navbar-right-items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    flex-wrap: nowrap;     /* 🔥 stops from going to 2nd row */
+  }
+
+  .navbar-cart-wrapper,
+  .navbar-profile-wrapper,
+  .navbar-user-icon,
+  .hamburger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-link {
+    display: none;
+  }
+  .mobile-only { display: flex !important; }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .navbar-left-section,
+  .navbar-right-items,
+  .navbar-search-wrapper {
+    min-width: 0; /* prevents overflow */
+  }
+
+  .navbar-search {
+    font-size: 11px;
+    padding: 4px 20px 4px 6px;
+  }
+
+  .navbar-right-items {
+    gap: 0.25rem;
+  }
+
+  .navbar-cart-wrapper,
+  .navbar-profile-wrapper {
+    flex-shrink: 0;
+  }
+.navbar-cart-icon {
+  margin-left: 0; /* Reset */
+}
+  .navbar-left-section {
+    flex: 1;
+  }
+
+  .navbar-search-wrapper {
+    max-width: 100%;
+  }
+
+  .navbar-right-items {
+    gap: 0.2rem;
+  }
+
+}
+.mobile-only {
+  display: none;
+}
+

@@ -1,0 +1,20 @@
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+  }
+  
+  .whatsapp-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+  }
+  
+  .whatsapp-icon:hover {
+    transform: scale(1.1);
+  }
+  

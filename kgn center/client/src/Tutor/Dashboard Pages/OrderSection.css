@@ -1,0 +1,55 @@
+/* ...existing code... */
+
+.order-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  margin-top: 10px;
+}
+
+.order-filters {
+  display: flex;
+  gap: 12px;
+}
+
+.order-filter-btn {
+  background: white;
+  border: 2px solid #3f63e0;
+  color: #3f63e0;
+  padding: 7px 22px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.order-filter-btn.active,
+.order-filter-btn:hover {
+  background: #3f63e0;
+  color: white;
+}
+
+.order-date-range {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.order-date-range input {
+  padding: 8px 38px 8px 12px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 180px;
+  background: #fff;
+  color: #333;
+}
+
+.order-date-icon {
+  position: absolute;
+  right: 12px;
+  font-size: 18px;
+  color: #3f63e0;
+  pointer-events: none;
+}

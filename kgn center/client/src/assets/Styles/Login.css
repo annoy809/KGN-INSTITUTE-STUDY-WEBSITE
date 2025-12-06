@@ -1,0 +1,133 @@
+/* signin.css */
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafb;
+}
+
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.signin-box {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logo-placeholder {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.signin-h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.oauth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.oauth-btn {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.google {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #1f2937;
+}
+
+.github {
+  background-color: #1f2937;
+  color: white;
+}
+
+.oauth-btn:hover {
+  opacity: 0.9;
+}
+
+.divider {
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.signin-form input {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 93%;
+}
+
+.continue-btn {
+  padding: 0.75rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.continue-btn:hover {
+  background-color: #2563eb;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+}
+
+.signup-link {
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.signup-link a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.clerk-footer {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}

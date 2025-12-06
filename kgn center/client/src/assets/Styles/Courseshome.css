@@ -1,0 +1,469 @@
+/* ================== 🌟 Premium Course Section ================== */
+.courses-section-container {
+  padding: 3rem 3.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+ 
+  color: #1a1a1a;
+  max-width: 1320px;
+  margin: 0 auto 3rem;
+  transition: all 0.4s ease;
+}
+
+
+/* ================== ✨ Section Title ================== */
+.courses-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: shimmerText 6s linear infinite;
+}
+
+@keyframes shimmerText {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.courses-section-title .rocket {
+  font-size: 1.7rem;
+  animation: flyRocket 3s ease-in-out infinite;
+  color: #6366f1;
+}
+
+/* Rocket motion */
+@keyframes flyRocket {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(8deg); }
+}
+
+.courses-section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 0.6rem;
+  margin-bottom: 2.2rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ================== 🧭 Category Navbar ================== */
+.category-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 2.2rem;
+}
+
+.category-btn {
+  padding: 0.65rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #222;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background: linear-gradient(135deg, #6366f1, #9333ea);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.3);
+}
+
+
+/* ================== 🎠 Carousel ================== */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.courses-carousel {
+  display: flex;
+  gap: 1.8rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0.5rem;
+  scrollbar-width: none;
+}
+.courses-carousel::-webkit-scrollbar { display: none; }
+
+/* ================== 📚 Course Card ================== */
+.courses-section-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1.7rem;
+  overflow: hidden;
+  min-width: 270px;
+  max-width: 270px;
+  flex: 0 0 auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s ease;
+  cursor: pointer;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  
+}
+
+.courses-section-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(99, 102, 241, 0.18);
+}
+
+/* ================== Image ================== */
+.courses-section-image-wrapper img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  transition: transform 0.35s ease;
+}
+
+.courses-section-card:hover .courses-section-image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* ================== Badge ================== */
+.courses-section-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(90deg, #fde68a, #fbbf24);
+  color: #78350f;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+/* ================== 🧾 Content ================== */
+.courses-section-content {
+  padding: 1rem 1.2rem;
+}
+
+/* ================== 📚 Course Card (Contrast Improved) ================== */
+.courses-section-content h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #111; /* OK */
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+.courses-section-content p {
+  font-size: 0.9rem;
+  color: #444; /* darker than #6b7280 for better contrast */
+  margin-bottom: 0.6rem;
+}
+
+/* Ratings (old gold color was too light) */
+.courses-section-rating {
+  font-size: 0.9rem;
+  color: #995c00; /* was #b4690e — darkened for accessibility */
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+/* Old Price (lightened gray fixed) */
+.courses-section-price {
+   margin-top:auto; 
+   display:flex; 
+   align-items:center; 
+   gap:0.6rem; 
+  }
+.courses-section-price .new { 
+  font-size:1rem; 
+  color:#0f1724; 
+  font-weight:800; 
+  padding-bottom:4px;
+}
+.courses-section-price .old {
+   font-size:0.9rem; 
+   color:#6b7280; 
+   text-decoration: line-through; 
+  }
+/* Subtitle (was #555, slightly darker) */
+.courses-section-subtitle {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 2.2rem;
+  line-height: 1.6;
+}
+
+/* No courses text (light gray adjusted) */
+.no-courses {
+  font-size: 1rem;
+  color: #555; /* was #888 */
+  text-align: center;
+  margin: 2rem 0;
+}
+
+
+/* ================== ✨ Hover Overlay / Glass Effect ================== */
+.courses-section-hover {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.4s ease;
+  padding: 1rem;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.courses-section-card:hover .courses-section-hover {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.courses-section-hover h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: #111;
+}
+
+.courses-section-hover p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.courses-section-hover button {
+  background: white;
+  border: none;
+  color: black;
+  font-weight: 600;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(41, 41, 42, 0.25);
+}
+
+.courses-section-hover button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(147, 51, 234, 0.4);
+}
+
+.wishlist-icon {
+  margin-top: 0.9rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #9333ea;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.wishlist-icon:hover {
+  transform: scale(1.25);
+  color: #4f46e5;
+}
+
+/* ================== ⏩ Carousel Buttons ================== */
+/* ================== ⏩ Carousel Buttons — Fixed / Premium ================== */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  color: black; /* main purple */
+  transition: all 0.3s ease;
+  z-index: 15;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  display: grid;
+  place-items: center;
+}
+
+.carousel-btn:hover {
+  transform: translateY(-50%) scale(1.12);
+  background: white;
+  color: #111;
+  box-shadow: 0 10px 25px rgba(147, 51, 234, 0.3);
+}
+
+.carousel-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-btn.left {
+  left: -60px; /* slightly inside container */
+}
+
+.carousel-btn.right {
+  right: -60px; /* slightly inside container */
+}
+
+/* Hide arrows on mobile */
+@media (max-width: 768px) {
+  .carousel-btn {
+    display: none;
+  }
+}
+
+
+/* ================== 🚫 Empty State ================== */
+.no-courses {
+  font-size: 1rem;
+  color: #888;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* ================== 📱 Responsive ================== */
+@media (max-width: 768px) {
+  .courses-section-container {
+    padding: 2rem 1.2rem;
+  }
+
+  .courses-section-title {
+    font-size: 1.7rem;
+  }
+
+  .courses-section-subtitle {
+    font-size: 1rem;
+  }
+
+  .courses-carousel {
+    gap: 1.2rem;
+  }
+
+  .courses-section-card {
+    min-width: 220px;
+  }
+
+  .carousel-btn {
+    display: none;
+  }
+}
+/* ================= MOBILE ULTRA RESPONSIVE MODE (PREMIUM SECTION) ================ */
+@media (max-width: 768px) {
+
+  /* Container padding reduce */
+  .courses-section-container {
+    padding: 1.8rem 1rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Title center + small */
+  .courses-section-title {
+    font-size: 17px !important;
+    text-align: center;
+  }
+
+  /* Subtitle optimize */
+  .courses-section-subtitle {
+    font-size: 10px !important;
+    margin-bottom: 1.4rem !important;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* Category navbar adjust */
+  .category-navbar {
+    gap: 0.5rem !important;
+    margin-bottom: 1.4rem !important;
+  }
+
+  .category-btn {
+    padding: 0.45rem 1rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Carousel spacing */
+  .courses-carousel {
+    gap: 0.8rem !important;
+    padding: 0.3rem 0.2rem !important;
+  }
+
+  /* Course card size adjust */
+  .courses-section-card {
+    min-width: 180px !important;
+    max-width: 180px !important;
+    border-radius: 1.3rem !important;
+    padding-bottom: 0.8rem !important;
+  }
+
+  /* Image height reduce */
+  .courses-section-image-wrapper img {
+    height: 120px !important;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+  }
+
+  /* Card content spacing */
+  .courses-section-content {
+    padding: 0.8rem 0.9rem !important;
+  }
+
+  /* Title inside card */
+  .courses-section-content h3 {
+    font-size: 0.95rem !important;
+    margin-bottom: 0.25rem !important;
+    line-height: 1.35;
+  }
+
+  /* Description */
+  .courses-section-content p {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.45rem !important;
+  }
+
+  /* Rating */
+  .courses-section-rating {
+    font-size: 0.78rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  /* Price layout */
+  .courses-section-price .new {
+    font-size: 0.9rem !important;
+  }
+
+  .courses-section-price .old {
+    font-size: 0.75rem !important;
+  }
+
+  /* Hide hover overlay on mobile (touch devices) */
+  .courses-section-hover {
+    display: none !important;
+  }
+
+  /* Hide arrows */
+  .carousel-btn {
+    display: none !important;
+  }
+}
+.emoji {
+  filter: hue-rotate(120deg) saturate(250%) brightness(120%) drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+

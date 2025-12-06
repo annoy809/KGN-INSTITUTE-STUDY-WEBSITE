@@ -1,0 +1,203 @@
+/* ============================================================
+ 🌤️ Error Fallback — Soft Professional Glass UI (2025 Edition)
+ Author: Mxsxom (Refined Professional Version)
+============================================================ */
+
+/* 🌫 Background */
+.error-page {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #f7f9fc 0%, #eef1f7 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", "Poppins", sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 🎨 Subtle Ambient Lights */
+.error-page::before,
+.error-page::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.23;
+  animation: floatLight 9s ease-in-out infinite alternate;
+}
+
+.error-page::before {
+  background: #9bb8ff;
+  top: -10%;
+  left: -10%;
+}
+.error-page::after {
+  background: #ffc8dd;
+  bottom: -10%;
+  right: -10%;
+}
+
+/* ✨ Ambient Floating Animation */
+@keyframes floatLight {
+  0% { transform: translate(0px, 0px); }
+  100% { transform: translate(25px, -35px); }
+}
+
+/* 🧊 Card — Professional Glass */
+.error-card {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  color: #1e1e1e;
+  backdrop-filter: blur(35px);
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 28px;
+  padding: 45px 48px;
+  max-width: 730px;
+  width: 90%;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow:
+    0 12px 45px rgba(0, 0, 0, 0.08),
+    inset 0 0 25px rgba(255, 255, 255, 0.2);
+  animation: cardFloat 7s ease-in-out infinite alternate;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.error-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 14px 50px rgba(0, 0, 0, 0.12),
+    inset 0 0 25px rgba(255, 255, 255, 0.28);
+}
+
+/* 📦 Glass Float Animation */
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* 🖼 Illustration */
+.error-animation {
+  width: 240px;
+  height: auto;
+  margin-bottom: 25px;
+  opacity: 0.95;
+  transition: transform 0.3s ease;
+}
+
+.error-animation:hover {
+  transform: scale(1.03);
+}
+
+/* 🔤 Headline */
+.error-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111827;
+  letter-spacing: 0.3px;
+}
+
+/* 📄 Sub-text */
+.error-message {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+/* ⚙ Error Details Box */
+.error-details {
+  font-family: "Fira Code", monospace;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 0.9rem;
+  color: #b91c1c;
+  max-height: 140px;
+  overflow-y: auto;
+  text-align: left;
+  margin: 0 auto 26px;
+  width: 90%;
+  border-left: 4px solid #ef4444;
+}
+
+/* 🎛 Button Area */
+.error-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* 🧭 Button Base */
+.error-btn {
+  padding: 12px 32px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: white;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* 🔵 Back Button - Professional Blue */
+.error-btn.back {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.28);
+}
+.error-btn.back:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.45);
+}
+
+/* 🩷 Home Button - Soft Pink */
+.error-btn.home {
+  background: linear-gradient(135deg, #ec4899, #db2777);
+  box-shadow: 0 6px 18px rgba(236, 72, 153, 0.28);
+}
+.error-btn.home:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 26px rgba(236, 72, 153, 0.45);
+}
+
+/* 💡 Soft Shine */
+.error-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.error-btn:hover::before {
+  opacity: 1;
+  animation: shine 1s forwards;
+}
+
+@keyframes shine {
+  0% { transform: translate(-100%, -100%) rotate(45deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translate(100%, 100%) rotate(45deg); opacity: 0; }
+}
+
+/* 📱 Responsive */
+@media (max-width: 640px) {
+  .error-card { padding: 40px 28px; }
+  .error-title { font-size: 1.9rem; }
+  .error-message { font-size: 0.98rem; }
+  .error-btn { width: 100%; }
+}

@@ -1,0 +1,222 @@
+.course-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+}
+
+/* Panels */
+.left-panel,
+.right-panel {
+  flex: 1;
+  min-width: 320px;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group span {
+  color: red;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Toggles & Radios */
+.toggle-group,
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.radio-group {
+  gap: 1.5rem;
+}
+
+.toggle-group input[type="checkbox"],
+.radio-group input[type="radio"] {
+  margin-right: 0.4rem;
+}
+
+/* Tabs */
+.tab-box {
+  margin-top: 2rem;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #eaeaea;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.tabs button.active {
+  background: #007bff;
+  color: white;
+}
+
+.tab-content {
+  background: #f1f1f1;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Buttons */
+.upload-button,
+.url-button,
+.add-media {
+  padding: 0.6rem 1.2rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.upload-button:hover,
+.url-button:hover,
+.add-media:hover {
+  background: #0056b3;
+}
+
+.publish-btn {
+  padding: 0.9rem 2rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.publish-btn:hover {
+  background: #218838;
+}
+
+/* Helper Text */
+p.url,
+p.updated,
+.hint {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .course-form {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .radio-group {
+    flex-direction: column;
+  }
+}
+.course-form-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.course-form-container .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.course-form-container label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.course-form-container input,
+.course-form-container textarea,
+.course-form-container select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.next-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.next-button:hover {
+  background-color: #0056b3;
+}

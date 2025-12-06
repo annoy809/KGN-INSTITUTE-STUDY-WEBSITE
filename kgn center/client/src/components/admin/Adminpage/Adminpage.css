@@ -1,0 +1,242 @@
+/* ===================== ⚙️ Admin Page Base ===================== */
+.admin-page-container {
+  padding: 2rem 2.5rem;
+  background: #f9fafb;
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+.admin-page-container h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+
+/* ===================== ⚡ Activity Logs ===================== */
+.activity-list {
+  list-style: none;
+  padding: 0;
+  background: #ffffff;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.activity-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.activity-list li strong {
+  color: #111827;
+}
+
+.activity-list li span {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.activity-list li:last-child {
+  border-bottom: none;
+}
+
+/* ===================== 🎓 Certificates ===================== */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+}
+
+.admin-table th {
+  background: #f3f4f6;
+  color: #374151;
+  font-weight: 600;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.admin-table tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.admin-table td button {
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.admin-table td button:hover {
+  background: #4338ca;
+}
+
+/* ===================== 💬 Messaging ===================== */
+.msg-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.msg-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.msg-input textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 0.7rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  resize: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.msg-input textarea:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+.msg-input button {
+  align-self: flex-end;
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.msg-input button:hover {
+  background: #4338ca;
+}
+
+.msg-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.msg-list li {
+  background: #ffffff;
+  padding: 0.8rem 1rem;
+  border-radius: 0.7rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.msg-list li strong {
+  color: #111827;
+}
+
+.msg-list li span {
+  display: block;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 0.2rem;
+}
+
+/* ===================== 📊 Analytics ===================== */
+.chart-container {
+  background: #ffffff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.chart-container h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.stats-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.stat-card {
+  flex: 1 1 200px;
+  background: #ffffff;
+  border-radius: 0.8rem;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1e293b;
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===================== 🌙 Optional Dark Mode ===================== */
+body.dark-mode .admin-page-container {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+body.dark-mode .admin-table,
+body.dark-mode .msg-input,
+body.dark-mode .msg-list li,
+body.dark-mode .chart-container,
+body.dark-mode .stat-card {
+  background: #1e293b;
+  color: #f1f5f9;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .admin-table th {
+  background: #273549;
+  color: #cbd5e1;
+}
+
+body.dark-mode .admin-page-container h1 {
+  color: #e0e7ff;
+}
+
+body.dark-mode .msg-input textarea {
+  background: #0f172a;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+body.dark-mode .msg-input textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+  outline: none;
+}

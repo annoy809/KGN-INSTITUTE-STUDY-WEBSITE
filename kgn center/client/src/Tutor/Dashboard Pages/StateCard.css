@@ -1,0 +1,85 @@
+/* ================== STAT CARD (Dashboard) ================== */
+.stat-card {
+  background: linear-gradient(135deg, #f3f6ff, #e4ecff);
+  border-radius: 16px;
+  padding: 24px 18px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+  background: radial-gradient(circle, rgba(79, 156, 255, 0.15), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.stat-card:hover::before {
+  opacity: 1;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon Circle */
+.icon-circle {
+  font-size: 32px;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+/* Stat Value */
+.stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 12px 0 4px;
+  color: #1e293b;
+}
+
+/* Stat Title */
+.stat-title {
+  font-size: 13.5px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .stat-card {
+    padding: 18px 14px;
+  }
+
+  .icon-circle {
+    width: 54px;
+    height: 54px;
+    font-size: 28px;
+  }
+
+  .stat-value {
+    font-size: 22px;
+  }
+
+  .stat-title {
+    font-size: 12px;
+  }
+}

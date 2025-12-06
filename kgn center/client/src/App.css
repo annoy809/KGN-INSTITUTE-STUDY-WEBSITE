@@ -1,0 +1,29 @@
+.app {
+  display: flex;
+  height: 100vh;
+
+}
+.parent-container {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+
+}
+
+
+
+html{
+    overflow-x: hidden;
+
+}
+body{
+  overflow-x: hidden;
+  
+}
+*::-webkit-scrollbar {
+  display: none !important;
+  
+}
+* {
+  scrollbar-width: none !important; /* Firefox */
+}

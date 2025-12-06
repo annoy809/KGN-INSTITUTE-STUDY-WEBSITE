@@ -1,0 +1,173 @@
+.course-card {
+  background: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    width: 100%;
+    
+    max-width: 360px;    /* Optional: Set a max height */
+    height: auto;    /* or something like 250px if fixed size is needed */
+}
+.course-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 6px 0 4px;
+  color: #222;
+}
+
+.course-description {
+  font-size: 0.875rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.course-card {
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.course-info {
+  padding: 16px;
+}
+
+.course-image {
+    width: 100%;
+    height: 100px;
+    /* reduce image height further if needed */
+    object-fit: cover;
+}
+
+.course-info {
+    padding: 12px;
+    /* reduce padding */
+}
+
+.course-title {
+    font-size: 16px;
+    /* slightly smaller text */
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.course-instructor {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.course-level {
+    font-size: 11px;
+    padding: 3px 6px;
+    border-radius: 6px;
+}
+
+.trending-wrapper {
+    padding: 60px 20px;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers content horizontally */
+    text-align: center;
+    /* Center text like the title */
+}
+
+.trending-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 40px;
+}
+
+.course-swiper {
+    width: 100%;
+    max-width: 1200px;
+    /* Keep it centered and responsive */
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    /* Center individual cards inside slide */
+}
+
+.course-card {
+    width: 100%;
+    max-width: 360px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+.course-card {
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.course-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.course-info {
+  padding: 16px;
+}
+
+.course-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.course-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.course-description {
+  font-size: 0.875rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.course-instructor {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.course-level {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #fff;
+  background-color: #3b82f6;
+  padding: 2px 8px;
+  border-radius: 999px;
+}

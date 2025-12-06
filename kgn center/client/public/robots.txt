@@ -1,0 +1,23 @@
+# ===============================
+# robots.txt for Kgn Centre
+# ===============================
+
+# Allow all crawlers to access all content
+User-agent: *
+Allow: /
+
+# Prevent crawling of build or config files
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /assets/
+Disallow: /api/
+Disallow: /server/
+Disallow: /*.map$
+
+# Optional: specify crawl delay for bots that crawl too fast
+Crawl-delay: 10
+
+# Sitemap for SEO (replace domain when deployed)
+Sitemap: https://www.kgncentre.com/sitemap.xml
+
+# End of file

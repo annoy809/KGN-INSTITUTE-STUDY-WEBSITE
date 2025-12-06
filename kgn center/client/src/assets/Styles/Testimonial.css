@@ -1,0 +1,128 @@
+/* ================= TESTIMONIAL SECTION ================= */
+.testimonials-section {
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Section Title */
+.testimonials-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #111;
+}
+
+.testimonial-subtext {
+  font-size: 1rem;
+  color: #555;
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* Swiper Wrapper */
+.testimonial-swiper {
+  padding-bottom: 3rem;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  cursor: grab;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Quote Mark */
+.quote-mark {
+  font-size: 3.5rem;
+  color: #6366f1;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-weight: 700;
+  opacity: 0.15;
+}
+
+/* Testimonial Quote */
+.testimonial-quote {
+  font-size: 1rem;
+  color: #111;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* User Info */
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.user-name {
+  font-weight: 600;
+  color: #111;
+}
+
+.user-title {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 2px;
+}
+
+/* Swiper Pagination Dots */
+.swiper-pagination-bullet {
+  background: rgba(99, 102, 241, 0.4);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #6366f1;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .testimonial-card {
+    padding: 1.8rem 1.2rem;
+  }
+  .testimonial-quote {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+  }
+  .testimonial-quote {
+    font-size: 0.9rem;
+  }
+  .user-img {
+    width: 45px;
+    height: 45px;
+  }
+}

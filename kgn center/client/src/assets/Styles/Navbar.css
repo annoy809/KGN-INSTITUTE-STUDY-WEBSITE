@@ -1,0 +1,249 @@
+/* src/assets/Styles/TopNavbar.css */
+
+.navbar {
+  background-color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: sticky; /* Likely had this for sticky behavior on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px; /* Or whatever your max width was */
+  margin: 0 auto;
+}
+
+.navbar-logo img {
+  height: 40px; /* Adjust as needed */
+  width: auto;
+}
+
+/* --- Desktop Navigation --- */
+.navbar-desktop {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Spacing between elements like select, search, and right items */
+}
+
+/* Categories Select */
+.navbar-select {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+  appearance: none; /* To remove default browser dropdown arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23333"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px;
+  padding-right: 30px; /* Space for custom arrow */
+}
+
+.navbar-select:focus {
+  outline: none;
+  border-color: #4f46e5; /* Original primary color */
+}
+
+
+/* Search Bar */
+.navbar-search-wrapper {
+  position: relative;
+  display: flex; /* To align search input and potential icon if you had one */
+  align-items: center;
+}
+
+.navbar-search {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  width: 250px; /* Example width */
+  transition: all 0.3s ease;
+}
+
+.navbar-search:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2); /* Shadow with original primary color */
+}
+
+/* Right Side Items (Links, Cart, User) */
+.navbar-right-items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-link {
+  color: #555;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.navbar-link:hover {
+  color: #4f46e5; /* Original primary color */
+}
+
+/* Cart Icon */
+.navbar-cart-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #555; /* Default icon color */
+  text-decoration: none;
+}
+
+.navbar-cart-icon {
+  color: #555; /* Default icon color */
+}
+
+.navbar-cart-wrapper:hover .navbar-cart-icon {
+  color: #4f46e5; /* Original primary color on hover */
+}
+
+
+.cart-count-badge {
+  background-color: #4f46e5; /* Original primary color for badge */
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 11px;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  transform: translate(25%, -25%);
+  min-width: 18px;
+  text-align: center;
+}
+
+/* User Profile */
+.navbar-profile-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.navbar-user-icon {
+  color: #555; /* Default icon color */
+  transition: color 0.3s ease;
+}
+
+.navbar-profile-wrapper:hover .navbar-user-icon {
+  color: #4f46e5; /* Original primary color on hover */
+}
+
+.navbar-user-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-left: 5px;
+}
+
+/* Profile Dropdown */
+.profile-dropdown-custom {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 1001; /* Above other content */
+}
+
+.profile-dropdown-custom.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.profile-link-custom {
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: block; /* Make links full width */
+}
+
+.profile-link-custom:hover {
+  background-color: #f0f2f5; /* Light gray hover */
+  color: #4f46e5; /* Original primary color */
+}
+
+.profile-link-custom.logout-custom {
+  background-color: #f8f9fa; /* Slightly different background for logout */
+  color: #dc3545; /* Red for logout */
+  border-top: 1px solid #eee;
+  margin-top: 5px;
+  padding-top: 10px;
+}
+
+.profile-link-custom.logout-custom:hover {
+  background-color: #feebe9; /* Lighter red hover */
+  color: #c82333;
+}
+
+
+/* Login Button */
+.login-button {
+  background-color: #4f46e5; /* Original primary color */
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.login-button:hover {
+  background-color: #4338ca; /* Darker shade of original primary on hover */
+  transform: translateY(-1px);
+}
+
+/* --- Mobile Toggle Icon (Hidden on Desktop) --- */
+.navbar-mobile-icon {
+  display: none; /* Hidden on desktop, shown by media query on mobile */
+  cursor: pointer;
+  color: #555; /* Icon color */
+}
+
+/* --- Media Queries --- */
+@media (max-width: 992px) {
+  .navbar-desktop {
+    display: none; /* Hide desktop navigation on tablets/mobiles */
+  }
+
+  .navbar-mobile-icon {
+    display: block; /* Show hamburger icon */
+  }
+}
+
+/* Additional media queries for smaller screens might have been here */
+/* @media (max-width: 768px) { ... } */
+/* @media (max-width: 480px) { ... } */

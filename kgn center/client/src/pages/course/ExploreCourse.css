@@ -1,0 +1,266 @@
+/* ================================
+   🌐 EXPLORE COURSES STYLING
+   Clean, modern, responsive design
+=================================== */
+
+.explore-course-section {
+  width: 100%;
+  min-height: 100vh;
+  background: #f9fafc;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 5%;
+}
+
+/* =============================
+   🔍 HEADER + SEARCH BAR
+============================= */
+.explore-course-header {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.explore-course-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.explore-course-search-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  padding: 0.6rem 1rem;
+  width: 320px;
+  transition: all 0.3s ease;
+}
+
+.explore-course-search-box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.explore-course-search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 0.95rem;
+  padding: 0.3rem 0.6rem;
+  background: transparent;
+}
+
+.explore-course-search-box svg {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* =============================
+   ⚙️ FILTERS + COURSE GRID
+============================= */
+.explore-course-body {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* ===== Filters Sidebar ===== */
+.explore-course-filters {
+  flex: 0 0 250px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  transition: all 0.3s ease;
+}
+
+.explore-course-filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.explore-course-filter-group h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  color: #1e293b;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+}
+
+.checkbox-label input {
+  transform: scale(1.1);
+}
+
+.explore-course-filter-group select {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+.explore-course-filter-group select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* ===== Right Side Grid ===== */
+.explore-course-grid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.explore-course-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+/* =============================
+   🧠 COURSE CARD STYLING
+============================= */
+.explore-course-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.explore-course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.explore-course-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.explore-course-content {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.explore-course-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.4rem;
+}
+
+.explore-course-desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+
+/* ===== Course Meta (Price + Rating) ===== */
+.explore-course-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.explore-course-meta .price {
+  font-weight: 600;
+  color: #16a34a;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.explore-course-meta .rating {
+  font-size: 0.85rem;
+  color: #f5c518;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+/* =============================
+   🚫 NO RESULTS
+============================= */
+.explore-course-no-results {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin-top: 3rem;
+}
+
+/* =============================
+   📱 RESPONSIVE DESIGN
+============================= */
+@media (max-width: 1024px) {
+  .explore-course-body {
+    flex-direction: column;
+  }
+
+  .explore-course-filters {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    position: relative;
+    top: 0;
+  }
+
+  .explore-course-filter-group {
+    flex: 1;
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  .explore-course-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .explore-course-search-box {
+    width: 100%;
+  }
+
+  .explore-course-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .explore-course-cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

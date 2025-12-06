@@ -1,0 +1,229 @@
+/* ================== MODERN iOS FOOTER ================== */
+.footer {
+  position: relative;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #1c1c1e;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Poppins", sans-serif;
+  padding: 4rem 2rem 2rem;
+  z-index: 10;
+}
+
+/* ✨ Glass Light Glow */
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 40% 60%, 
+    rgba(255, 255, 255, 0.35) 0%, 
+    rgba(255, 255, 255, 0) 70%
+  );
+  z-index: 0;
+}
+
+/* ======= LAYOUT ======= */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ======= HEADINGS ======= */
+.footer-section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+
+
+/* ======= ABOUT SECTION ======= */
+.footer-section.about p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* ======= SOCIAL ICONS ======= */
+.footer-socials {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.footer-socials a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  color: #000;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(15px);
+}
+
+.footer-socials a:hover {
+  background: linear-gradient(135deg, #007aff, #5856d6);
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(88, 86, 214, 0.25);
+}
+
+/* ======= LINKS ======= */
+.footer-section.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section.links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-section.links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  transition: all 0.25s ease;
+}
+
+.footer-section.links a:hover {
+  color: #007aff;
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* ======= CONTACT ======= */
+.footer-section.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section.contact li {
+  display: flex;
+  align-items: center;
+  color: #333;
+  opacity: 0.85;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-section.contact li svg {
+  margin-right: 10px;
+  color: #007aff;
+  font-size: 1.1rem;
+}
+
+/* ======= BOTTOM COPYRIGHT ======= */
+.footer-bottom {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  color: #555;
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-bottom a {
+  color: #007aff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* ======= RESPONSIVE ======= */
+/* ========== MOBILE RESPONSIVE BOOST ========== */
+@media (max-width: 768px) {
+  
+  /* Footer Padding reduce */
+  .footer {
+    padding: 2.5rem 1rem 1.2rem;
+    text-align: center;
+  }
+
+  /* Grid turns into single column */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Headings center */
+  .footer-section h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* About section */
+  .footer-section.about p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Center social icons */
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-socials a {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  /* Links center + bigger spacing for touch */
+  .footer-section.links ul {
+    text-align: center;
+  }
+
+  .footer-section.links li {
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-section.links a {
+    font-size: 1rem;
+  }
+
+  /* Contact section center */
+  .footer-section.contact ul {
+    text-align: center;
+  }
+
+  .footer-section.contact li {
+    justify-content: center;
+    font-size: 0.95rem;
+  }
+
+  .footer-section.contact li svg {
+    margin-right: 6px;
+  }
+
+  /* Footer bottom text */
+  .footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+.footer-socials a:nth-child(1) { color: #1877F2; } /* Facebook */
+.footer-socials a:nth-child(2) { color: #1DA1F2; } /* Twitter */
+.footer-socials a:nth-child(3) { color: #E1306C; } /* Instagram */
+.footer-socials a:nth-child(4) { color: #0077B5; } /* LinkedIn */

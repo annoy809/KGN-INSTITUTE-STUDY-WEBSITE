@@ -1,0 +1,79 @@
+/* ================== RegisterCTA.css ================== */
+.cta-container {
+  background: linear-gradient(135deg, #f3f4f6, #ffffff);
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  max-width: 720px;
+  margin: 3rem auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  animation: gradientText 4s linear infinite;
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.cta-subtext {
+  font-size: 1.05rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.cta-button {
+  background: linear-gradient(90deg, #91ecf8, #0d9adb);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.85rem 2rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(19, 19, 19, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(147, 51, 234, 0.4);
+}
+
+.cta-note {
+  font-size: 0.88rem;
+  color: #6b7280;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .cta-container {
+    padding: 2rem 1.2rem;
+  }
+
+  .cta-heading {
+    font-size: 1.5rem;
+  }
+
+  .cta-subtext {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    padding: 0.75rem 1.6rem;
+    font-size: 0.95rem;
+  }
+}
